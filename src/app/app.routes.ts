@@ -5,9 +5,9 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./layout/default-layout/default-layout.component').then(
-        (c) => c.DefaultLayoutComponent
-      ),
+      import(
+        './components/layout/register-login/default-layout.component'
+      ).then((c) => c.DefaultLayoutComponent),
     children: [
       {
         path: 'register',
@@ -17,7 +17,8 @@ export const routes: Routes = [
   },
   {
     path: '',
-    loadComponent: () => import('./components/layout/layout.component'),
+    loadComponent: () =>
+      import('./components/layout/dashboard/layout.component'),
     children: [
       {
         path: 'admindashboard',
