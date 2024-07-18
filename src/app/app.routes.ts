@@ -1,12 +1,24 @@
 import { Routes } from '@angular/router';
+import { RegisterComponent } from './view/register/register.component';
 
 export const routes: Routes = [
   {
-     
+    path: '',
+    loadComponent: () =>
+      import('./layout/default-layout/default-layout.component').then(
+        (c) => c.DefaultLayoutComponent
+      ),
+    children: [
+      {
+        path: 'register',
+        component: RegisterComponent,
+      },
+    ],
+  },
+  {
     path: '',
     loadComponent: () => import('./components/layout/layout.component'),
     children: [
-      
       {
         path: 'admindashboard',
         loadComponent: () =>
@@ -20,6 +32,7 @@ export const routes: Routes = [
         path: 'charts',
         loadComponent: () => import('./components/charts/charts.component'),
       },
+
       {
         path: '',
         redirectTo: 'dashboard',
@@ -27,6 +40,12 @@ export const routes: Routes = [
       },
     ],
   },
+
+  {
+    path: '**',
+    redirectTo: 'dashboard',
+  },
+
   {
     path: '**',
     redirectTo: 'dashboard',

@@ -1,6 +1,20 @@
-input, select, button{
+input,
+select,
+button {
     width: 25rem;
     height: 3.125rem;
     border-radius: 4px;
+    padding-left: 1rem;
+}
 
+select:focus {
+    border: 2px solid #F7B224;
+    outline: none;
+    border-color: #F7B224;
+}
+
+input:focus {
+    border: 2px solid #F7B224;
+    outline: none;
+    border-color: #F7B224;
 }

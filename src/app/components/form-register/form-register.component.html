@@ -1,72 +1,95 @@
 <div class="w-full grid place-items-center text-white">
-    <section>
-        <div>
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-24">
+  <section>
+    <div>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-24">
+        <div class="form-group flex flex-col gap-11">
+          <div class="form-group flex flex-col gap-2">
+            <label for="type-person-input"> Tipo de persona </label>
+            <select
+              class="w-40 p-1 rounded text-black"
+              placeholder="Nombre"
+              name="type-person-input"
+              id="type-person-input"
+            >
+              <option value="natural">persona natural</option>
+              <option value="juridica">persona juridica</option>
+            </select>
+          </div>
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="full-name">Nombre completo</label>
+            <input
+              class="text-black"
+              type="text"
+              name="full-name"
+              id="full-name"
+              placeholder="John Doe"
+            />
+          </div>
 
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="type-factory-input">Tipo de empresa</label>
+            <select class="text-black" name="factory" id="type-factory-input">
+              <option value="micro">Microempresa</option>
+              <option value="mediana">Mediana empresa</option>
+              <option value="grande">Grande empresa</option>
+            </select>
+          </div>
 
-                <div class="form-group flex flex-col gap-11">
-                    <div class="form-group flex flex-col gap-2">
-
-                        <label placeholder=" Selecciona una opción " for="person"> Tipo de persona
-                        </label>
-                        <select class=" w-40 p-1  rounded" placeholder="Nombre" name="person" id="type-person-input">
-                            <option value="natural">persona natural </option>
-                            <option value="juridica">persona juridica </option>
-                        </select>
-                    </div>
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="full name">Nombre completo</label>
-                        <input class="" type="text" name="full-name" id="full-name" />
-                    </div>
-
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="factory">Tipo de empresa</label>
-                        <select class="" name="factory" id="type-factory-input">
-                            <option value="micro">Microempresa</option>
-                            <option value="mediana">Mediana empresa</option>
-                            <option value="grande">Grande empresa</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="business-name">Razon social (si aplica)</label>
-                        <input class="" type="text" name="business-name" id="business-name" />
-                    </div>
-                </div>
-
-
-                <div class="form-group flex flex-col gap-11">
-                    <div class="form-group flex flex-col gap-2">
-
-                        <label class="" for="email">Correo electronico</label>
-                        <input class="" type="email" name="email" id="email" />
-                    </div>
-
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="password">Contraseña</label>
-                        <input class="" type="password" name="password" id="password" />
-                    </div>
-    
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="confirm-password">Confirmar contraseña</label>
-                        <input class="" type="password" name="confirm-password" id="confirm-password" />
-                    </div>
-    
-                    <div class="form-group flex flex-col gap-2 mt-8">
-                        <button class=" bg-secondary text-black font-semibold" type="button">Registrarme</button>
-                    </div>
-
-                </div>
-
-                
-
-            </form>
-
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="business-name">Razon social (si aplica)</label>
+            <input
+              class="text-black"
+              type="text"
+              name="business-name"
+              id="business-name"
+              placeholder="Universidad Eafit"
+            />
+          </div>
         </div>
 
-    </section>
+        <div class="form-group flex flex-col gap-11">
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="email">Correo electronico</label>
+            <input
+              class="text-black"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe@gmail.com"
+            />
+          </div>
+
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="password">Contraseña</label>
+            <input
+              class="text-black"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="**********"
+            />
+          </div>
+
+          <div class="form-group flex flex-col gap-2">
+            <label class="" for="confirm-password">Confirmar contraseña</label>
+            <input
+              class="text-black"
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="**********"
+            />
+          </div>
+
+          <div class="form-group flex flex-col gap-2 mt-8">
+            <button class="bg-secondary text-black font-semibold" type="button">
+              Registrarme
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>
 
-<div>
-
-</div>
+<div></div>
