@@ -1,15 +1,8 @@
-<div class="flex flex-col background-register w-full">
-  <div class="flex flex-col flex-1 z-10">
-    <div class="w-auto">
-      <nav class="h-9 text-white float-end">
-        <app-header class="flex justify-end hover-expand"></app-header>
-      </nav>
-    </div>
-
-    <div class="">
+<div class="flex flex-col min-h-screen background-register w-full">
+  <div class="flex flex-grow items-center justify-center">
+    <div>
       <router-outlet></router-outlet>
     </div>
   </div>
-
-  <app-footer class="mt-auto"></app-footer>
+  <app-footer class="w-full"></app-footer>
 </div>

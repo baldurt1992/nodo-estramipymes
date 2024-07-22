@@ -1,34 +1,46 @@
-<div class="w-full grid place-items-center text-white">
-    <section>
-        <div>
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-24">
-                <div class="form-group flex place items-center flex-col gap-11">
-                    <div class="form-group flex flex-col gap-2">
+<div class="w-full text-white">
+  <section>
+    <div>
+      <form class="w-full">
+        <div
+          class="form-group flex items-center flex-col gap-11 p-0 rounded-sm"
+        >
+          <div class="form-group flex flex-col gap-2 w-full">
+            <label class="" for="email">Correo electronico</label>
+            <input
+              class="text-black"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe@gmail.com"
+            />
+          </div>
 
-                    </div>
-                </div>
-
-                <div class="form-group flex items-center flex-col gap-11 p-0 rounded-sm">
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="email">Correo electronico</label>
-                        <input class="text-black" type="email" name="email" id="email"
-                            placeholder="johndoe@gmail.com" />
-                    </div>
-
-                    <div class="form-group flex flex-col gap-2">
-                        <label class="" for="password">Contraseña</label>
-                        <input class="text-black" type="password" name="password" id="password"
-                            placeholder="**********" />
-                    </div>
-                    <div class="form-group flex flex-col gap-2 mt-8">
-                        <button class=" w-full bg-secondary text-black font-semibold " type="button">
-                            Login
-                        </button>
-                    </div>
-                </div>
-            </form>
+          <div class="form-group flex flex-col gap-2 w-full">
+            <label class="" for="password">Contraseña</label>
+            <input
+              class="text-black"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="**********"
+            />
+          </div>
+          <div class="form-group flex flex-col gap-2 mt-8 w-full">
+            <button
+              class="w-full bg-secondary text-black font-semibold"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
         </div>
-    </section>
+      </form>
+      <div class="w-full px-4 flex justify-center mt-12">
+        <img src="/img/white-logo.png" alt="white-logo" width="150px" />
+      </div>
+    </div>
+  </section>
 </div>
 
 <div></div>

@@ -18,7 +18,6 @@ body {
 html,
 body {
     height: 100%;
-    /* Hace que el body tome toda la altura de la ventana del navegador */
     margin: 0;
     padding: 0;
 }
