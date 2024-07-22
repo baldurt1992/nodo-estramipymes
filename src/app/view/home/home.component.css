@@ -1,0 +1,7 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 83px);
+    /* Ajusta el valor 80px según la altura de tu navbar */
+    overflow: hidden;
+}
