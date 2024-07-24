@@ -21,3 +21,23 @@ body {
     margin: 0;
     padding: 0;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-menu-panel {
+    background-color: #000 !important;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.mat-mdc-button .mat-mdc-button-persistent-ripple::before {
+    background-color: black !important;
+}

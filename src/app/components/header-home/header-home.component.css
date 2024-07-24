@@ -21,3 +21,7 @@
 .underline-animation:hover::after {
     transform: scaleX(1);
 }
+
+.mat-mdc-button:not(:disabled) {
+    color: black;
+}

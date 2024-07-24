@@ -1,4 +1,4 @@
-import { ApplicationConfig, Component } from '@angular/core';
+import { ApplicationConfig, Component, ViewEncapsulation } from '@angular/core';
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { RegisterComponent } from './view/register/register.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
@@ -8,7 +8,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { LoginComponent } from './view/login/login.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimationsAsync()],
+  providers: [
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    provideAnimationsAsync(),
+  ],
 };
 @Component({
   selector: 'app-root',

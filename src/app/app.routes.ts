@@ -1,8 +1,13 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './view/home/home.component';
 import { RegisterComponent } from './view/register/register.component';
 import { LoginComponent } from './view/login/login.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: '',
     loadComponent: () =>
@@ -14,9 +19,9 @@ export const routes: Routes = [
         path: 'register',
         component: RegisterComponent,
       },
-      { 
+      {
         path: 'login',
-      component: LoginComponent,
+        component: LoginComponent,
       },
     ],
   },
@@ -38,22 +43,10 @@ export const routes: Routes = [
         path: 'charts',
         loadComponent: () => import('./components/charts/charts.component'),
       },
-
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full',
-      },
     ],
   },
-
   {
     path: '**',
-    redirectTo: 'dashboard',
-  },
-
-  {
-    path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: '',
   },
 ];
