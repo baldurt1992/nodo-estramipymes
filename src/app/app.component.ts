@@ -1,4 +1,4 @@
-import { ApplicationConfig, Component, ViewEncapsulation } from '@angular/core';
+import { ApplicationConfig, Component } from '@angular/core';
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { RegisterComponent } from './view/register/register.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
