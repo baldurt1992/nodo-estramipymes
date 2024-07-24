@@ -13,6 +13,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 html,
@@ -20,16 +21,6 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .mat-mdc-menu-panel {
@@ -40,4 +31,9 @@ body {
 
 .mat-mdc-button .mat-mdc-button-persistent-ripple::before {
     background-color: black !important;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #F7B224 #191B20;
 }

@@ -1,39 +1,62 @@
 .expand-hover-nav .expand {
     width: 20rem;
-    transform: translateX(-45px);
+    height: 3.5rem;
+    transform: translateX(-80px);
     transition: transform 0.3s ease-in-out;
-}
-
-.expand-hover-nav .expand:hover {
-    transform: translateX(-25px);
 }
 
 .expand-hover-nav {
     width: 10rem;
-    border-right: 12px solid #191B20;
-    transition: width 0.3s ease-in-out, color 0.2s ease-in-out, border-right 0.3s ease-in-out;
-}
-
-.expand-hover-nav:hover {
-    width: 18rem;
-    color: white;
     border-right: 12px solid #F7B224;
-}
-
-.hover-text {
-    transition: color 0.2s ease-in-out;
-}
-
-.hover-text:hover {
     color: #F7B224;
+    transition: width 0.3s ease-in-out, color 0.2s ease-in-out, border-right 0.3s ease-in-out;
 }
 
 .expand-hover-nav .bg-nav {
     z-index: -15;
-    transform: translateX(205px);
+    transform: translateX(0);
     transition: transform 0.3s ease-in-out;
 }
 
-.expand-hover-nav:hover .bg-nav {
-    transform: translateX(0px);
+@media (min-width: 1280px) {
+    .expand-hover-nav .expand {
+        width: 20rem;
+        transform: translateX(-90px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .expand-hover-nav .expand:hover {
+        transform: translateX(-75px);
+    }
+
+    .expand-hover-nav {
+        width: 10rem;
+        border-right: 12px solid #000000;
+        color: #000000;
+        transition: width 0.3s ease-in-out, color 0.2s ease-in-out, border-right 0.3s ease-in-out;
+    }
+
+    .expand-hover-nav:hover {
+        width: 12rem;
+        color: white;
+        border-right: 12px solid #F7B224;
+    }
+
+    .hover-text {
+        transition: color 0.2s ease-in-out;
+    }
+
+    .hover-text:hover {
+        color: #F7B224;
+    }
+
+    .expand-hover-nav .bg-nav {
+        z-index: -15;
+        transform: translateX(260px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .expand-hover-nav:hover .bg-nav {
+        transform: translateX(0px);
+    }
 }

@@ -1,38 +1,16 @@
 <div
-  class="text-grayDark h-auto mt-4 rounded-lg border-b border-t border-l border-grayDark gap-6 md:flex-row md:items-center shadow-md expand-hover-nav overflow-hidden"
+  class="text-grayDark h-auto xl:mt-4 rounded-lg border-b border-t border-l border-black gap-6 md:flex-row md:items-center shadow-md expand-hover-nav overflow-hidden"
 >
   <header
     class="capitalize flex justify-center items-center w-auto py-4 relative overflow-hidden expand"
   >
-    <span class="absolute bg-grayDark w-full h-full top-0 left-0 bg-nav"></span>
+    <span class="absolute bg-black w-full h-full top-0 left-0 bg-nav"></span>
     <div class="flex items-center justify-center">
       <div class="flex items-center">
         <div class="flex items-center">
-          <button
-            class="relative middle none font-sans font-medium uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xl text-gray-500 grid xl:hidden"
-            type="button"
-          >
-            <span
-              class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-                stroke-width="3"
-                class="h-6 w-6 text-blue-gray-500"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-          </button>
-          <a href="#">
+          <a routerLink="/home">
             <button
+              routerLinkActive="bg-gradient-to-tr bg-secondary text-black shadow-md shadow-blue-500/20 active:opacity-[0.85]"
               class="hover-text middle none font-medium center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg hidden items-center gap-1 px-4 xl:flex"
               type="button"
             >
@@ -41,14 +19,14 @@
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 aria-hidden="true"
-                class="h-5 w-5"
+                class="h-7 w-7 text-inherit"
               >
                 <path
                   fill-rule="evenodd"
-                  d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                   clip-rule="evenodd"
-                ></path></svg
-              >Cerrar sesión
+                ></path>
+              </svg>
             </button>
             <button
               class="relative hover-text middle none font-medium text-center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xl grid xl:hidden"
@@ -62,11 +40,11 @@
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
-                  class="h-5 w-5 text-blue-gray-500"
+                  class="h-7 w-7 text-blue-gray-500"
                 >
                   <path
                     fill-rule="evenodd"
-                    d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                     clip-rule="evenodd"
                   ></path>
                 </svg>
@@ -87,7 +65,7 @@
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 aria-hidden="true"
-                class="h-5 w-5 text-blue-gray-500"
+                class="h-6 w-6 text-blue-gray-500"
               >
                 <path
                   fill-rule="evenodd"
@@ -114,7 +92,7 @@
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 aria-hidden="true"
-                class="h-5 w-5 text-blue-gray-500"
+                class="h-6 w-6 text-blue-gray-500"
               >
                 <path
                   fill-rule="evenodd"
