@@ -1,0 +1,11 @@
+.bg-gradient-to-r {
+    background: linear-gradient(to right, #000066, #00A9E0);
+}
+
+.title {
+    font-weight: 900;
+}
+
+.subtitle {
+    font-weight: 600;
+}

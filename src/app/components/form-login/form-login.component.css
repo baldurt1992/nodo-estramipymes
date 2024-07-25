@@ -1,9 +1,9 @@
 input,
 button {
-    width: 25rem;
     height: 3.125rem;
     border-radius: 4px;
-    padding-left: 1rem;
+    width: 100%;
+    max-width: 100vw;
 }
 
 
@@ -12,4 +12,26 @@ input:focus {
     border: 2px solid #F7B224;
     outline: none;
     border-color: #F7B224;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    max-width: 40rem;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+
+    input,
+    button,
+    select {
+        height: 3.125rem;
+        border-radius: 4px;
+        width: 100%;
+    }
 }

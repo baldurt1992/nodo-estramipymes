@@ -8,7 +8,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { LoginComponent } from './view/login/login.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimationsAsync()],
+  providers: [
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    provideAnimationsAsync(),
+  ],
 };
 @Component({
   selector: 'app-root',
