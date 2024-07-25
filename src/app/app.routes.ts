@@ -3,7 +3,7 @@ import { HomeComponent } from './view/home/home.component';
 import { RegisterComponent } from './view/register/register.component';
 import { LoginComponent } from './view/login/login.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
-
+import { WelcomeQuestionnaireComponent } from './components/welcome-questionnaire/welcome-questionnaire.component';
 export const routes: Routes = [
   {
     path: '',
@@ -24,7 +24,20 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent,
       },
+    ],
+  },
+  {
+    path: '',
+    loadComponent: () =>
+      import(
+        './components/layout/bussiness-form/bussiness-form.component'
+      ).then((c) => c.BussinessFormComponent),
+    children: [
       { path: 'questionnaire', component: QuestionnaireComponent },
+      {
+        path: 'welcome-questionaire',
+        component: WelcomeQuestionnaireComponent,
+      },
     ],
   },
   {
