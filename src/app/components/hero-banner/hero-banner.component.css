@@ -23,7 +23,7 @@ span {
 @media(min-width: 768px) {
     .title h1 {
         font-size: 4.75rem;
-        line-height: 1;
+        
     }
 
     .subtitle p {
@@ -33,13 +33,11 @@ span {
 
     .subtitle h1 {
         font-size: 3.75rem;
-        line-height: 1;
         padding-right: 0;
     }
 
     .subtitle span {
         font-size: 2.25rem;
-        line-height: 1.5rem;
         padding-right: 0;
     }
 }
