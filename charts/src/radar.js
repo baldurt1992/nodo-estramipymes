@@ -14,14 +14,14 @@ Chart.register(annotationPlugin);
     ],
     datasets: [{
       label: 'Radar Estratégico',
-      data: [1, 2, 3, 1, 2],
+      data: [1, 2, 4, 2, 2],
       fill: true,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
-      pointBackgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: '#01036920',
+      borderColor: '#010369',
+      pointBackgroundColor: '#010369',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(255, 99, 132)'
+      pointHoverBorderColor: '#010369'
     }]
   };
 

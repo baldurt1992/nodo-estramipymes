@@ -8,6 +8,10 @@ Chart.register(annotationPlugin);
         { precio: 96000, valor: 102000 }
     ];
 
+    const mean = Math.round((data[0].valor+data[0].precio)/2);
+
+    const font_size = 15;
+
     const options = {
 
         aspectRatio: 1,
@@ -61,6 +65,7 @@ Chart.register(annotationPlugin);
                 font:{
                     size: 30,
                 },
+                align: 'center',
             },
             legend:{
                 display: false
@@ -88,7 +93,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Bajo', 'precio'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
 
@@ -113,7 +118,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Diferenciación'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
 
@@ -138,7 +143,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Diferenciación', 'segmentada'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
                     label3b: {
@@ -148,7 +153,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Bajo precio /', 'Valor añadido'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
 
@@ -173,7 +178,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Híbrida'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
 
@@ -204,7 +209,7 @@ Chart.register(annotationPlugin);
                         backgroundColor: 'rgba(245,245,245,0)',
                         content: ['Estrategias', 'destinadas al', 'fracaso'],
                         font: {
-                            size: 18
+                            size: font_size
                         }
                     },
                 }
