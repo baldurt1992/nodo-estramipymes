@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chart.js example</title>
+    <link rel="stylesheet" href="chart.css">
+  </head>
+  <body>
+    <div style="width: 500px; border: 1px solid darkblue; border-radius: 20px;"><canvas id="dimensions"></canvas></div><br/>
+    <div style="width: 800px; border: 1px solid darkblue; border-radius: 20px" ><canvas id="acquisitions"></canvas></div>
+    <section class="charts">
+      <div style="width: 600px; border: 1px solid darkblue; border-radius: 20px" ><canvas id="reloj_estrategico"></canvas></div>
+      <div style="width: 600px; border: 1px solid darkgoldenrod; border-radius: 20px" ><canvas id="radar_estrategico"></canvas></div>
+    </section>
+    <div style="width: 600px; border: 1px solid darkred; border-radius: 20px" ><canvas id="circulo_dorado" class="charts"></canvas></div>
+
+    <script type="module" src="dimensions.js"></script>
+    <script type="module" src="acquisitions.js"></script>
+    <script type="module" src="reloj.js"></script>
+    <script type="module" src="radar.js"></script>
+    <script type="module" src="circulo.js"></script>
+  </body>
+</html>
