@@ -20,10 +20,32 @@ span {
     padding-right: 5rem;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1280px) {
+    .title h1 {
+        font-size: 3.5rem;
+
+    }
+
+    .subtitle p {
+        font-size: 1rem;
+        padding-right: 0;
+    }
+
+    .subtitle h1 {
+        font-size: 2.5rem;
+        padding-right: 0;
+    }
+
+    .subtitle span {
+        font-size: 2rem;
+        padding-right: 0;
+    }
+}
+
+@media(min-width: 1536px) {
     .title h1 {
         font-size: 4.75rem;
-        
+
     }
 
     .subtitle p {
