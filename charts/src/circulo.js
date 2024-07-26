@@ -8,7 +8,13 @@ Chart.register(annotationPlugin);
         { precio: 50, valor: 50 }
     ];
 
-    const mean = Math.round((data[0].valor+data[0].precio)/2);
+    const circle_size = [5, 95, 5, 95];
+    // const circle_size = [25, 75, 50, 100];
+    const diameter = (circle_size[1]-circle_size[0])
+    const k = 0.15
+    const percent_circle = diameter*k
+
+    // const what_label = "Texto para mostrar en ¿Qué? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in ipsum eget mi viverra luctus. Nulla id lectus accumsan, suscipit mauris ac, ultrices tellus. In iaculis bibendum nisl vitae ultricies. Nullam ultrices vehicula quam a fringilla. Nulla eget lacus dictum massa blandit hendrerit. Fusce consectetur dui rhoncus orci volutpat convallis. Nulla facilisi. Duis tempus dolor ac consequat tempor. Curabitur a imperdiet dolor. Pellentesque venenatis massa sapien, in blandit nisi finibus non. Donec ac scelerisque lorem, in finibus lectus. In purus sapien, interdum et magna ac, efficitur efficitur ex. Aliquam convallis massa non scelerisque finibus. Duis a est lorem. Proin auctor mattis libero ac rhoncus"
 
     const font_size = 15;
 
@@ -20,48 +26,19 @@ Chart.register(annotationPlugin);
             x: {
                 min: 0,
                 max: 100,
-                title: {
-                    display: true,
-                    text: 'Precio',
-                    font: {
-                        size: 25
-                    }
-                },
-                border: {
-                    color: 'rgb(0,0,0)',
-                    width: 3,
-                }
+                display: false,
             },
             y: {
                 min: 0,
                 max: 100,
-                title: {
-                    display: true,
-                    text: 'Valor percibido del producto',
-                    font: {
-                        size: 25
-                    }
-                },
-                border: {
-                    color: 'rgb(0,0,0)',
-                    width: 3,
-                }
-            }
-        },
-
-        elements: {
-            point: {
-                pointStyle: 'star',
-                radius: 10,
-                borderColor: 'rgb(255,192,0)',
-                borderWidth: 5,
+                display: false,
             }
         },
 
         plugins: {
             title:{
-                display: true,
-                text: 'Círculo Dorado',
+                // display: true,
+                // text: 'Círculo Dorado',
                 font:{
                     size: 30,
                 },
@@ -72,143 +49,155 @@ Chart.register(annotationPlugin);
             },
             annotation: {
                 annotations: {
-                    line1: {
-                        type: 'line',
-                        yMin: 100000,
-                        yMax: 100000,
-                        xMin: 94000,
-                        xMax: 106000,
-                        borderColor: 'rgb(0, 0, 0)',
-                        borderWidth: 2,
-                        arrowHeads: {
-                            start: { enabled: true },
-                            end: { enabled: true },
-                            display: true
-                        },
-                    },
-                    label1: {
-                        type: 'label',
-                        xValue: 93000,
-                        yValue: 100000,
-                        backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Bajo', 'precio'],
-                        font: {
-                            size: font_size
-                        }
-                    },
 
-                    line2: {
-                        type: 'line',
-                        yMin: 94000,
-                        yMax: 106000,
-                        xMin: 100000,
-                        xMax: 100000,
-                        borderColor: 'rgb(0, 0, 0)',
-                        borderWidth: 2,
-                        arrowHeads: {
-                            start: { enabled: true },
-                            end: { enabled: true },
-                            display: true
-                        },
-                    },
-                    label2: {
-                        type: 'label',
-                        xValue: 100000,
-                        yValue: 107000,
-                        backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Diferenciación'],
-                        font: {
-                            size: font_size
-                        }
-                    },
-
-                    line3: {
-                        type: 'line',
-                        yMin: 95000,
-                        yMax: 105000,
-                        xMin: 95000,
-                        xMax: 105000,
-                        borderColor: 'rgb(0, 0, 0)',
-                        borderWidth: 2,
-                        arrowHeads: {
-                            start: { enabled: true },
-                            end: { enabled: true },
-                            display: true
-                        },
-                    },
-                    label3a: {
-                        type: 'label',
-                        xValue: 107000,
-                        yValue: 105000,
-                        backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Diferenciación', 'segmentada'],
-                        font: {
-                            size: font_size
-                        }
-                    },
-                    label3b: {
-                        type: 'label',
-                        xValue: 94000,
-                        yValue: 94000,
-                        backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Bajo precio /', 'Valor añadido'],
-                        font: {
-                            size: font_size
-                        }
-                    },
-
-                    line4: {
-                        type: 'line',
-                        yMin: 105000,
-                        yMax: 95000,
-                        xMin: 95000,
-                        xMax: 105000,
-                        borderColor: 'rgb(0, 0, 0)',
-                        borderWidth: 2,
-                        arrowHeads: {
-                            start: { enabled: true },
-                            end: { enabled: true },
-                            display: true
-                        },
-                    },
-                    label4: {
-                        type: 'label',
-                        xValue: 94000,
-                        yValue: 106000,
-                        backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Híbrida'],
-                        font: {
-                            size: font_size
-                        }
-                    },
-
-                    elipse_center: {
+                    what_circle: {
                         type: 'ellipse',
-                        yMin: 0,
-                        yMax: 60,
-                        xMin: 40,
-                        xMax: 100,
+                        yMin: circle_size[0],
+                        yMax: circle_size[1],
+                        xMin: circle_size[2],
+                        xMax: circle_size[3],
                         borderColor: '#ed7d31',
                         backgroundColor: '#ed7d31',
                         borderWidth: 2,
                     },
-                    elipse_bottom: {
+                    // what_box: {
+                    //     type: 'box',
+                    //     yMin: 0,
+                    //     yMax: 20,
+                    //     xMin: 0,
+                    //     xMax: 60,
+                    //     borderColor: 'rgb(0, 0, 0)',
+                    //     borderWidth: 2,
+                    //     backgroundColor: '#ed7d00'
+                    // },
+                    // what_label: {
+                    //     type: 'label',
+                    //     xValue: 30,
+                    //     yValue: 10,
+                    //     backgroundColor: 'rgba(245,245,245,0)',
+                    //     content: what_label,
+                    //     font: {
+                    //         size: font_size
+                    //     }
+                    // },
+
+
+                    how_circle: {
                         type: 'ellipse',
-                        yMin: 94000,
-                        yMax: 99000,
-                        xMin: 97500,
-                        xMax: 109500,
-                        borderColor: 'rgb(0, 0, 0)',
+                        yMin: circle_size[0]+percent_circle,
+                        yMax: circle_size[1]-percent_circle,
+                        xMin: circle_size[2]+percent_circle,
+                        xMax: circle_size[3]-percent_circle,
+                        borderColor: '#ffc000',
+                        backgroundColor: '#ffc000',
                         borderWidth: 2,
-                        rotation: -45,
-                        backgroundColor: 'rgba(255, 99, 132, 0)'
                     },
-                    label_ellipse: {
+                    // how_box: {
+                    //     type: 'box',
+                    //     yMin: 30,
+                    //     yMax: 70,
+                    //     xMin: 0,
+                    //     xMax: 40,
+                    //     borderColor: 'rgb(0, 0, 0)',
+                    //     borderWidth: 2,
+                    //     backgroundColor: '#ffc000',
+                    // },
+
+                    why_circle: {
+                        type: 'ellipse',
+                        yMin: circle_size[0]+(percent_circle*2),
+                        yMax: circle_size[1]-(percent_circle*2),
+                        xMin: circle_size[2]+(percent_circle*2),
+                        xMax: circle_size[3]-(percent_circle*2),
+                        borderColor: '#4472c4',
+                        backgroundColor: '#4472c4',
+                        borderWidth: 2,
+                    },
+                    // why_box: {
+                    //     type: 'box',
+                    //     yMin: 80,
+                    //     yMax: 100,
+                    //     xMin: 0,
+                    //     xMax: 60,
+                    //     borderColor: 'rgb(0, 0, 0)',
+                    //     borderWidth: 2,
+                    //     backgroundColor: '#4472c4'
+                    // },
+
+                    line_why: {
+                        type: 'line',
+                        // yMin: 55,
+                        // yMax: 90,
+                        // xMin: 80,
+                        // xMax: 60,
+                        yMin: 60,
+                        yMax: 85,
+                        xMin: 50,
+                        xMax: 100,
+                        borderColor: 'rgb(0, 0, 0)',
+                        borderWidth: 1,
+                        arrowHeads: {
+                            end: { display: true },
+                        },
+                    },
+                    line_how: {
+                        type: 'line',
+                        // yMin: 40,
+                        // yMax: 50,
+                        // xMin: 65,
+                        // xMax: 40,
+                        yMin: 50,
+                        yMax: 50,
+                        xMin: 75,
+                        xMax: 100,
+                        borderColor: 'rgb(0, 0, 0)',
+                        borderWidth: 1,
+                        arrowHeads: {
+                            end: { display: true },                            
+                        },
+                    },
+                    line_what: {
+                        type: 'line',
+                        // yMin: 27,
+                        // yMax: 10,
+                        // xMin: 80,
+                        // xMax: 60,
+                        yMin: 15,
+                        yMax: 10,
+                        xMin: 70,
+                        xMax: 100,
+                        borderColor: 'rgb(0, 0, 0)',
+                        borderWidth: 1,
+                        arrowHeads: {
+                            end: { display: true },
+                        },
+                    },
+                    label_why: {
                         type: 'label',
-                        xValue: 107000,
-                        yValue: 94000,
+                        xValue: circle_size[2]+diameter/2,
+                        yValue: circle_size[0]+diameter/2,
                         backgroundColor: 'rgba(245,245,245,0)',
-                        content: ['Estrategias', 'destinadas al', 'fracaso'],
+                        content: ['¿Por qué?', '¿Para qué?'],
+                        font: {
+                            size: font_size
+                        }
+                    },
+                    label_how: {
+                        type: 'label',
+                        xValue: circle_size[2]+diameter/2,
+                        yValue: circle_size[0]+diameter*k*1.5,
+                        backgroundColor: 'rgba(245,245,245,0)',
+                        content: ['¿Cómo?'],
+                        font: {
+                            size: font_size
+                        }
+                    },
+                    label_what: {
+                        type: 'label',
+                        xValue: circle_size[2]+diameter/2,
+                        yValue: circle_size[0]+diameter*k*0.5,
+                        backgroundColor: 'rgba(245,245,245,0)',
+                        content: ['¿Qué?'],
                         font: {
                             size: font_size
                         }
@@ -224,7 +213,7 @@ Chart.register(annotationPlugin);
             datasets: [
                 // labels: data.map(row => row.precio),
                 {
-                    label: 'Reloj Estratégico',
+                    label: 'Círculo Dorado',
                     data: data.map(row => ({ x: row.precio, y: row.valor }))
                 },
             ]

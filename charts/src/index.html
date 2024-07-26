@@ -11,8 +11,31 @@
       <div style="width: 600px; border: 1px solid darkblue; border-radius: 20px" ><canvas id="reloj_estrategico"></canvas></div>
       <div style="width: 600px; border: 1px solid darkgoldenrod; border-radius: 20px" ><canvas id="radar_estrategico"></canvas></div>
     </section>
-    <div style="width: 600px; border: 1px solid darkred; border-radius: 20px" ><canvas id="circulo_dorado" class="charts"></canvas></div>
 
+    <section class="circulo">
+      <div>
+        <h2>Círculo Dorado</h2>
+      </div>
+      <div id="circulo_graphs">
+        <div style="width: 600px; border-radius: 20px" ><canvas id="circulo_dorado" class="charts"></canvas></div>
+        <div id="circulo_textbox" style="width: 600px;">
+          <div id="why">
+            <h3>Propósito</h3>
+            <p id="p_why"></p>
+          </div>
+          <div id="how">
+            <h3>Propuesta de Valor</h3>
+            <p id="p_how"></p>
+          </div>
+          <div id="what">
+            <h3>Productos y servicios</h3>
+            <p id="p_what"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
     <script type="module" src="dimensions.js"></script>
     <script type="module" src="acquisitions.js"></script>
     <script type="module" src="reloj.js"></script>

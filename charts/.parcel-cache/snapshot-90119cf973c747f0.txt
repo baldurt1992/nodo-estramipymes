@@ -1,4 +1,4 @@
-11283
+11286
 132C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\Hash.js133661754995984698 0
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\package-manager\src\utils.js133661754987264596 0
 71C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\cross-fetch133661754977934609 1
@@ -26,10 +26,10 @@
 88C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\source-map\lib\base64-vlq.js133661754967693787 0
 92C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\number\range.js133661755089716860 0
 91C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\regions\UG.js133661755045259680 0
-62C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.html133662612280018317 0
+62C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.html133664481905323973 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\json\to-string-tag.js133661755104536922 0
 98C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\transformer-babel\lib\types.js133661754981784662 0
-51C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist133662615293695682 1
+51C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist133664504700613988 1
 89C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\svgo\plugins\removeViewBox.js133661755002526130 0
 84C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\abortcontroller-polyfill133661754977974709 1
 86C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\cosmiconfig\dist\util.d.ts133661754994834674 0
@@ -52,7 +52,7 @@
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\string\code-point-at.js133661755021719362 0
 111C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domutils\lib\stringify.d.ts133661754997846118 0
 138C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\addClassesToSVGElement.js133661754972003812 0
-50C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src133662610505600205 1
+50C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src133664479345591128 1
 111C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@babel\runtime\helpers\initializerDefineProperty.js133661755011906163 0
 97C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\number\to-precision.js133661755102622718 0
 116C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domutils\lib\esm\querying.js.map133661754990344616 0
@@ -82,7 +82,7 @@
 104C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\reflect\prevent-extensions.js133661755088716873 0
 82C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\src\invertObj.js133661755024569306 0
 104C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\instance\find-last-index.js133661755056929712 0
-60C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\chart.css133661795228815931 0
+60C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\chart.css133664504751346816 0
 82C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\dayjs\esm\locale\uk.js133661755025959283 0
 75C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\src\gt.js133661755022139320 0
 114C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\features\input-autocomplete-onoff.js133661755030981735 0
@@ -103,7 +103,7 @@
 110C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\features\css-media-resolution.js133661755014836137 0
 82C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\es\dissocPath.js133661755017679311 0
 86C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\src\propSatisfies.js133661755035011755 0
-61C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\circulo.js133662615292965200 0
+61C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\circulo.js133664500267784088 0
 91C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\semver\ranges\to-comparators.js133661754991734554 0
 124C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\css\properties.json133661754982874722 0
 88C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\uuid\dist\umd\uuidNIL.min.js133661754987744622 0
@@ -129,12 +129,12 @@
 100C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-tree\lib\syntax\node\MediaFeature.js133661755016786141 0
 106C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\internals\well-known-symbol-wrapped.js133661755111535387 0
 90C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\dayjs\plugin\pluralGetSet.d.ts133661755032421618 0
-61C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\index.html133662612334312369 0
+61C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\index.html133664481898784024 0
 115C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\020-usage.md133661754996746129 0
 84C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\nth-check\lib\index.d.ts133661754985194632 0
 88C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\transformer-json\src133661754952469508 1
 121C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\features\mdn-css-backdrop-pseudo-element.js133661755036141711 0
-59C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\radar.js133662573462283948 0
+59C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\radar.js133663443752566627 0
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\stable\index.d.ts133661754949659373 0
 129C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\Dimension.js133661754987434623 0
 74C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\domelementtype133661754971133878 1
@@ -148,7 +148,7 @@
 88C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\svgo\plugins\inlineStyles.js133661754995794607 0
 72C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite133661755047669754 1
 76C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\src\sum.js133661755038099724 0
-59C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\reloj.js133662552327558831 0
+59C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\reloj.js133663443752586569 0
 101C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\data-view\set-float16.js133661755093996900 0
 86C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\htmlnano\docs\netlify.toml133661755005066215 0
 102C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\modules\es.typed-array.iterator.js133661755046459750 0
@@ -588,7 +588,7 @@
 85C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\dayjs\esm\locale\es-pr.js133661755003546125 0
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\dayjs\plugin\preParsePostFormat.d.ts133661755032461902 0
 93C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\htmlparser2\lib\WritableStream.js133661754968403768 0
-69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.2a01d320.js133662615225394944 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.2a01d320.js133664489091115059 0
 76C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\msgpackr-extract133661754969053847 1
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\url-search-params-polyfill\README.md133661754956485593 0
 104C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\utility-types\dist\aliases-and-guards.js.map133661754970603789 0
@@ -1032,7 +1032,7 @@
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\uuid\dist\sha1.js133661754985514625 0
 79C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\ramda\es\applyTo.js133661755011896193 0
 100C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\array\virtual\values.js133661755110425383 0
-74C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.85753699.css.map133662615225745178 0
+74C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.85753699.css.map133664504700603967 0
 82C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\uuid\dist\stringify.js133661754986394664 0
 92C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\modules\es.math.clz32.js133661755041179774 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\array\virtual\some.js133661755096546844 0
@@ -3595,6 +3595,7 @@
 99C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\number\virtual\to-fixed.js133661755101475341 0
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\parcel\src\bin.js133661754952759391 0
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\parcel\src\cli.js133661754965735562 0
+60C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\src\script.js133664485609743028 0
 120C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\data\patch.json133661755008896167 0
 91C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\regions\NC.js133661755038509948 0
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\parcel\lib\bin.js133661754950399365 0
@@ -3709,6 +3710,7 @@
 82C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\dayjs\esm\locale\fi.js133661755005396102 0
 81C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\node-fetch\browser.js133661754948099352 0
 74C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\node-fetch\lib133661754970853796 1
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.f5c48570.js.map133664489088204436 0
 83C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\node-fetch\package.json133661754964365621 0
 85C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\js-yaml\lib\type\merge.js133661754984574620 0
 83C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\node-fetch\lib\index.js133661754957655573 0
@@ -5984,7 +5986,7 @@
 98C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\array\virtual\splice.js133661755097616979 0
 111C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\helpers\cjs\_class_private_field_loose_key.cjs133661754985934662 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-tree\cjs\syntax\node\index.cjs133661754998636183 0
-73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.2a01d320.js.map133662615225804983 0
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.2a01d320.js.map133664489091205120 0
 106C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-tree\cjs\syntax\node\MediaFeatureRange.cjs133661755000856180 0
 86C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\color-convert\CHANGELOG.md133661754949909367 0
 99C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-tree\cjs\syntax\node\MediaQuery.cjs133661755001156208 0
@@ -6162,7 +6164,7 @@
 102C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domhandler\LICENSE133661754948449387 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\map\delete-all.js133661755031871769 0
 107C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domhandler\lib\index.js133661754956415529 0
-73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.a521242b.js.map133662615226094885 0
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.a521242b.js.map133664489085334496 0
 106C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domhandler\lib\node.js133661754967633868 0
 113C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domhandler\lib\esm\index.d.ts133661754977704645 0
 117C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\css-select\node_modules\domhandler\lib\esm\index.d.ts.map133661754971823916 0
@@ -6645,7 +6647,7 @@
 95C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\array\to-reversed.js133661755103147062 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\array\to-spliced.js133661755104166942 0
 113C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\modules\es.typed-array.uint8-clamped-array.js133661755047009675 0
-69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.5409ea04.js133662615228024828 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.5409ea04.js133664489085234382 0
 97C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@babel\runtime\helpers\esm\toArray.js133661755009776170 0
 91C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\stable\array\unshift.js133661755109535464 0
 130C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\common\SyntaxError.js133661755007406137 0
@@ -7709,7 +7711,7 @@
 93C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\symbol\observable.js133661755086845050 0
 107C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\data-view\get-uint8-clamped.js133661755064918407 0
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\symbol\pattern-match.js133661755088436868 0
-70C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.85753699.css133662615225394944 0
+70C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.85753699.css133664504700543991 0
 94C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\symbol\replace-all.js133661755092166933 0
 90C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\full\symbol\replace.js133661755092446925 0
 102C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\caniuse-lite\data\features\magnetometer.js133661755035631742 0
@@ -8317,7 +8319,7 @@
 99C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\promise\all-settled.js133661754990984687 0
 96C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\actual\array\virtual\push.js133661755089236844 0
 93C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\promise\index.js133661755070877622 0
-73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.7ee5cf8b.js.map133662615225745178 0
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.7ee5cf8b.js.map133664489088214379 0
 102C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\promise\with-resolvers.js133661755111645443 0
 101C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\array\group-by-to-map.js133661755065298316 0
 93C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\core-js\features\object\assign.js133661755007596145 0
@@ -9743,7 +9745,7 @@
 110C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\helpers\_\_sliced_to_array_loose\package.json133661755023749313 0
 104C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\helpers\_\_sliced_to_array\package.json133661755023869690 0
 114C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\helpers\_\_skip_first_generator_next\package.json133661755023659297 0
-69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.696520ca.js133662615293625638 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.696520ca.js133664500268354105 0
 98C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\codeframe\lib\codeframe.js.map133661754994624733 0
 77C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\core\util.js133661754976694728 0
 105C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@swc\helpers\_\_set_prototype_of\package.json133661755023529325 0
@@ -10495,7 +10497,7 @@
 113C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\index.js133661754959235654 0
 112C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\LICENSE133661754948459355 0
 114C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\README.md133661754987024743 0
-69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.7ee5cf8b.js133662615225394944 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.7ee5cf8b.js133664489088104370 0
 118C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\l10n\css.json133661754973383749 0
 118C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\l10n\index.js133661754965555565 0
 122C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\css\at-rules.json133661754968603791 0
@@ -10574,7 +10576,7 @@
 129C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Block.js133661754973233801 0
 127C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\CDO.js133661754977014697 0
 131C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Comment.js133661754982574649 0
-73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.5409ea04.js.map133662615228074830 0
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.5409ea04.js.map133664489085334496 0
 135C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Declaration.js133661754990624657 0
 133C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Dimension.js133661754991354596 0
 128C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Hash.js133661754996044621 0
@@ -11280,5 +11282,6 @@
 87C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\.bin\update-browserslist-db133661755112985406 0
 91C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\.bin\update-browserslist-db.ps1133661755112985406 0
 69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\node_modules\.bin\uuid133661755112995424 0
-69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.a521242b.js133662615226024888 0
-73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.696520ca.js.map133662615293685714 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.a521242b.js133664489085234382 0
+69C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.f5c48570.js133664489088104370 0
+73C:\Curso\Nodo\Grupo 6\nodo-estramipymes\charts\dist\index.696520ca.js.map133664500268434203 0
