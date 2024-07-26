@@ -1,0 +1,30 @@
+<div>
+  <mat-form-field appearance="fill" class="filter">
+    <mat-label>Buscar usuario</mat-label>
+    <input matInput (input)="applyFilter($event)" />
+  </mat-form-field>
+
+  <div *ngIf="!selectedUser">
+    <mat-list>
+      <mat-list-item
+        *ngFor="let user of filteredUsers"
+        (click)="onUserSelect(user)"
+        class="user-item"
+      >
+        {{ user.name }}
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <div *ngIf="selectedUser">
+    <p class="text-lg font-semibold lg:text-3xl">{{ selectedUser.name }}</p>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let response of selectedUser.responses">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ response.question }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ response.answer }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
