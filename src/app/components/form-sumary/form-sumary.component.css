@@ -1,0 +1,19 @@
+.filter {
+    width: 100%;
+}
+
+.mat-elevation-z8 {
+    padding: 20px;
+}
+
+.mat-accordion {
+    margin-top: 20px;
+}
+
+.user-item {
+    cursor: pointer !important;
+}
+
+.user-item:hover {
+    background-color: rgb(226, 226, 226);
+}

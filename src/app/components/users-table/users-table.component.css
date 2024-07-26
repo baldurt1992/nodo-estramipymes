@@ -1,0 +1,86 @@
+.table-container {
+    height: 20.625rem;
+    max-height: 31.25rem;
+
+}
+
+.filter {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+th,
+td {
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrapper {
+    display: block;
+    width: 100%;
+}
+
+mat-table {
+    width: 100%;
+    min-width: 800px;
+}
+
+mat-header-cell,
+mat-cell {
+    white-space: nowrap;
+}
+
+tr {
+    overflow: auto;
+}
+
+.edit-input {
+    border: 2px solid #3f51b5;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.no-editable {
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #888888;
+}
+
+.cell-content {
+    display: inline-block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .cell-content {
+        white-space: nowrap;
+        overflow: auto;
+        text-overflow: ellipsis;
+    }
+
+    td {
+        overflow-x: scroll;
+    }
+}

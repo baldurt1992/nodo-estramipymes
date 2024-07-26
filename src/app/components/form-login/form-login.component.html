@@ -1,4 +1,4 @@
-<div class="w-full flex justify-center md:justify-end p-0 lg:p-4">
+<div class="w-full flex justify-center md:justify-end p-0 lg:p-4 relative">
   <div
     class="w-full max-w-md md:w-[30rem] lg:w-[35rem] xl:w-[40rem] h-full flex flex-col items-center rounded-lg form-container bg-white shadow-lg p-8 md:p-12"
   >
@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class="w-full">
-        <form class="w-full">
-          <div class="mb-8">
+        <form class="w-full" (ngSubmit)="login()">
+          <div class="mb-8 relative">
             <label class="block text-white text-sm font-bold mb-2" for="email">
               Email
             </label>
@@ -18,11 +18,14 @@
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
+              [(ngModel)]="email"
+              name="email"
               placeholder="Tu email"
               autocomplete="name"
+              (focus)="clearError()"
             />
           </div>
-          <div class="mb-8">
+          <div class="mb-8 relative">
             <label
               class="block text-white text-sm font-bold mb-2"
               for="password"
@@ -30,16 +33,22 @@
               Contraseña
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
+              class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
+              [(ngModel)]="password"
+              name="password"
               placeholder="Tu contraseña"
+              (focus)="clearError()"
             />
+            <div *ngIf="errorMessage" class="error-message">
+              {{ errorMessage }}
+            </div>
           </div>
           <div class="flex items-center justify-between mb-4">
             <button
               class="bg-secondary text-black hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-              type="button"
+              type="submit"
             >
               Iniciar sesión
             </button>
