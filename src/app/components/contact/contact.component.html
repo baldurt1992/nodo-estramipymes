@@ -2,8 +2,8 @@
   <div class="mx-auto px-4">
     <h2 class="text-5xl title text-center mb-12 text-white">Contacto</h2>
     <div class="max-w-2xl mx-auto bg-white p-8 rounded shadow-lg">
-      <form>
-        <div class="mb-4">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="mb-4 relative">
           <label class="block text-gray800 text-sm font-bold mb-2" for="name">
             Nombre
           </label>
@@ -11,11 +11,18 @@
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
+            formControlName="name"
             placeholder="Tu nombre"
             autocomplete="name"
           />
+          <div
+            *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)"
+            class="absolute bottom-0 right-4"
+          >
+            <small class="text-red text-xs">Campo requerido</small>
+          </div>
         </div>
-        <div class="mb-4">
+        <div class="mb-4 relative">
           <label class="block text-gray800 text-sm font-bold mb-2" for="email">
             Email
           </label>
@@ -23,11 +30,27 @@
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
+            formControlName="email"
             placeholder="Tu email"
             autocomplete="email"
           />
+          <div
+            *ngIf="
+              f['email'].invalid && (f['email'].dirty || f['email'].touched)
+            "
+            class="absolute bottom-0 right-4"
+          >
+            <small
+              *ngIf="f['email'].errors?.['required']"
+              class="text-red text-xs"
+              >Campo requerido</small
+            >
+            <small *ngIf="f['email'].errors?.['email']" class="text-red text-xs"
+              >Email no válido</small
+            >
+          </div>
         </div>
-        <div class="mb-4">
+        <div class="mb-4 relative">
           <label
             class="block text-gray800 text-sm font-bold mb-2"
             for="subject"
@@ -38,10 +61,20 @@
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
             id="subject"
             type="text"
+            formControlName="subject"
             placeholder="Asunto"
           />
+          <div
+            *ngIf="
+              f['subject'].invalid &&
+              (f['subject'].dirty || f['subject'].touched)
+            "
+            class="absolute bottom-0 right-4"
+          >
+            <small class="text-red text-xs">Campo requerido</small>
+          </div>
         </div>
-        <div class="mb-4">
+        <div class="mb-4 relative">
           <label
             class="block text-gray800 text-sm font-bold mb-2"
             for="message"
@@ -52,13 +85,28 @@
             class="shadow resize-none appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             rows="5"
+            formControlName="message"
             placeholder="Escribe tu mensaje aquí..."
           ></textarea>
+          <div
+            *ngIf="
+              f['message'].invalid &&
+              (f['message'].dirty || f['message'].touched)
+            "
+            class="absolute bottom-2 right-4"
+          >
+            <small class="text-red text-xs">Campo requerido</small>
+          </div>
         </div>
         <div class="flex items-center justify-between">
           <button
             class="bg-black transition-all duration-200 text-white hover:bg-secondary hover:text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
+            type="submit"
+            [disabled]="contactForm.invalid"
+            [ngClass]="{
+              'opacity-50 cursor-not-allowed': contactForm.invalid,
+              'opacity-100': !contactForm.invalid
+            }"
           >
             Enviar
           </button>
