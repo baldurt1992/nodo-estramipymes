@@ -38,7 +38,7 @@ export const routes: Routes = [
     children: [
       { path: 'questionnaire', component: QuestionnaireComponent },
       {
-        path: 'welcome-questionaire',
+        path: 'welcome-questionnaire',
         component: WelcomeQuestionnaireComponent,
       },
     ],
