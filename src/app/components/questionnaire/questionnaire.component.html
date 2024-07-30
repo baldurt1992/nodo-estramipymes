@@ -1,85 +1,87 @@
-<!-- questionnaire.component.html -->
-<div class="container mx-auto px-4">
-  <h1 class="text-2xl font-bold mb-4">Cuestionario</h1>
-  <form>
-    <div formGroupName="businessData">
-      <h2 class="text-xl font-semibold mb-2">Datos del Negocio</h2>
-      <label for="creationDate">Fecha de Creación del Negocio</label>
-      <input
-        id="creationDate"
-        formControlName="creationDate"
-        type="date"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="founders">Fundadores</label>
-      <input
-        id="founders"
-        formControlName="founders"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="reasonForCreation">Razón de Creación</label>
-      <input
-        id="reasonForCreation"
-        formControlName="reasonForCreation"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="purpose">Propósito</label>
-      <input
-        id="purpose"
-        formControlName="purpose"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="productsOrServices">Productos o Servicios</label>
-      <input
-        id="productsOrServices"
-        formControlName="productsOrServices"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="industry">Industria</label>
-      <input
-        id="industry"
-        formControlName="industry"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="operatingCosts">Costos de Operación</label>
-      <input
-        id="operatingCosts"
-        formControlName="operatingCosts"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="websiteOrSocialMedia">Página Web o Redes Sociales</label>
-      <input
-        id="websiteOrSocialMedia"
-        formControlName="websiteOrSocialMedia"
-        type="text"
-        class="mb-4 p-2 border rounded w-full"
-      />
-
-      <label for="businessProfile">Perfil del Negocio</label>
-      <textarea
-        id="businessProfile"
-        formControlName="businessProfile"
-        class="mb-4 p-2 border rounded w-full"
-      ></textarea>
+<div class="w-full h-auto flex justify-center px-4 py-4 lg:px-0 md:py-12">
+  <div class="py-4 px-4 md:w-2/3 h-full md:h-fit">
+    <div class="flex justify-between items-center h-14">
+      <p class="text-primaryDark mb-8 text-2xl lg:text-4xl font-semibold">
+        {{ currentSection }}
+      </p>
     </div>
+    <div>
+      <form
+        [formGroup]="form"
+        class="flex flex-col gap-4"
+        (ngSubmit)="onSubmit()"
+      >
+        <div
+          *ngFor="let question of questions; let i = index"
+          [hidden]="currentQuestionIndex !== i"
+        >
+          <div class="h-14">
+            <label [for]="question.controlName" class="text-xs md:text-lg">{{
+              question.label
+            }}</label>
+          </div>
+          <textarea
+            [formControlName]="question.controlName"
+            [id]="question.controlName"
+            placeholder="Escribe aquí..."
+            maxlength="1500"
+            class="h-64 w-full p-4 resize-none border border-gray rounded-md focus:outline-none focus:border-primaryDark"
+          ></textarea>
+          <div class="flex justify-between text-xs text-gray800 md:text-sm">
+            <p class="text-gray800">
+              {{ currentQuestionIndex + 1 }} de {{ questions.length }}
+            </p>
+            <p class="">Caracteres restantes: {{ remainingCharacters }}</p>
+          </div>
+        </div>
 
-    <!-- Add other sections similarly -->
+        <div class="flex justify-between mt-4">
+          <button
+            type="button"
+            class="py-2 px-4 rounded-lg bg-transparent border-2 text-xs transition-all md:text-lg"
+            (click)="previousQuestion()"
+            [ngClass]="{
+              'text-gray border-gray cursor-not-allowed':
+                currentQuestionIndex === 0,
+              'hover:bg-secondary hover:border-secondary hover:text-black':
+                currentQuestionIndex > 0
+            }"
+            [disabled]="currentQuestionIndex === 0"
+          >
+            Anterior
+          </button>
 
-    <button type="submit" class="bg-blue-500 text-white p-2 rounded">
-      Enviar
-    </button>
-  </form>
+          <button
+            *ngIf="!isLastQuestion"
+            type="button"
+            class="py-2 px-4 rounded-lg bg-transparent border-2 text-xs transition-all md:text-lg"
+            (click)="nextQuestion()"
+            [ngClass]="{
+              'text-gray border-gray cursor-not-allowed':
+                !isCurrentQuestionAnswered(),
+              'hover:bg-secondary hover:border-secondary hover:text-black':
+                isCurrentQuestionAnswered()
+            }"
+            [disabled]="!isCurrentQuestionAnswered()"
+          >
+            Siguiente
+          </button>
+
+          <button
+            *ngIf="isLastQuestion"
+            type="submit"
+            class="py-2 px-4 rounded-lg bg-transparent border-2 text-xs transition-all md:text-lg"
+            [ngClass]="{
+              'text-gray border-gray cursor-not-allowed': !form.valid,
+              'hover:bg-secondary hover:border-secondary hover:text-black':
+                form.valid
+            }"
+            [disabled]="!form.valid"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

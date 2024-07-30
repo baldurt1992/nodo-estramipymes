@@ -22,6 +22,7 @@ module.exports = {
       gray: "#bdbdbd",
       gray800: "#4d4d4d",
       orange: "#FD673E",
+      red: "#FF0000"
     },
     extend: {
       transitionProperty: {

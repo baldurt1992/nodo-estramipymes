@@ -36,4 +36,44 @@ body {
 html {
     scrollbar-width: thin;
     scrollbar-color: #F7B224 #191B20;
+    --mdc-filled-text-field-focus-active-indicator-color: #000066;
+    --mdc-outlined-text-field-focus-outline-color: #000066;
+    --mat-form-field-focus-select-arrow-color: #000066;
+    --mat-select-focused-arrow-color: #000066;
+
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #ececec !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    caret-color: #191B20 !important;
+}
+
+.mat-primary.mat-mdc-button-base {
+    color: #000066 !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label {
+    color: #000066 !important;
+}
+
+div.mat-mdc-select-panel {
+    background-color: #e7e7e7 !important;
+    color: white !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+    background-color: #949494 !important;
+}
+
+.mat-primary.mat-mdc-button-base {
+    --mdc-icon-button-icon-color: #000066;
+    --mat-icon-button-state-layer-color: #000066;
+    --mat-icon-button-ripple-color: rgba(35, 41, 121, 0.12);
+}
+
+.mat-mdc-table {
+    box-shadow: none;
 }
