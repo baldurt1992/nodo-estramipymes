@@ -18,12 +18,8 @@ export class ChartVrioComponent implements AfterViewInit {
   private createChart(): void {
     // DATA
     const data = {
-      // labels: [
-      //   'a', 'b'
-      // ],
       datasets: [
         {
-          // label: 'Radar Estratégico',
           data: [],
         },
       ],
