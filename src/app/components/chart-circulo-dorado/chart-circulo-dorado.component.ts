@@ -126,6 +126,7 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
               font: {
                 size: font_size,
               },
+              color: '#fff'
             },
             label_how: {
               type: 'label',

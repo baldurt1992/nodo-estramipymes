@@ -108,7 +108,7 @@ export class ChartVrioComponent implements AfterViewInit {
     let userSelection = ""; // CAUTION: This value must be connected to user Selection from form results.
 
     // Testing
-    userSelection = "";
+    userSelection = "parity";
 
     if (userSelection === "disadvantage") {
 
