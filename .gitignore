@@ -44,3 +44,4 @@ Thumbs.db
 #charts
 charts/node_modules
 charts/dist
+charts/.parcel-cache/
