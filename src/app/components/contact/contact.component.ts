@@ -18,6 +18,7 @@ import {
 })
 export class ContactComponent {
   contactForm: FormGroup;
+  submitted = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -35,6 +36,12 @@ export class ContactComponent {
   onSubmit(): void {
     if (this.contactForm.valid) {
       console.log('Formulario enviado', this.contactForm.value);
+      this.submitted = true;
+      this.contactForm.reset();
+
+      setTimeout(() => {
+        this.submitted = false;
+      }, 2000);
     } else {
       console.log('Formulario no válido');
     }

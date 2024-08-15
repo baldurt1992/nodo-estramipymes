@@ -268,4 +268,20 @@ export class QuestionnaireService {
   getQuestions(): Question[] {
     return this.questions;
   }
+
+  getSections(): string[] {
+    return [
+      'Datos y características del negocio',
+      'Clientes',
+      'Competidores',
+      'Propuesta de valor',
+      'Fuentes de ingresos',
+      'Estructura de costos',
+      'Recursos y Capacidades',
+      'Liderazgo y cultura',
+      'Industria o sector',
+      'Salud financiera',
+      'Aspiración',
+    ];
+  }
 }

@@ -1,0 +1,50 @@
+.wizard-progress {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.wizard-progress .step {
+    flex: 1 1 1%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wizard-progress .step-circle {
+    flex-shrink: 0;
+    height: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wizard-progress .step p {
+    line-height: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .wizard-progress {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 0.7rem;
+    }
+
+    .wizard-progress .step {
+        flex: 1 1 1%;
+    }
+
+    .wizard-progress .step p {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wizard-progress {
+
+        font-size: 0.7rem;
+    }
+
+
+}

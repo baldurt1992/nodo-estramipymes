@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { RouterLink } from '@angular/router';
+import { roles } from '../../models/roles';
 
 @Component({
   selector: 'app-users-table',
@@ -42,28 +43,33 @@ export class UsersTableComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<any>();
   editMode: { [key: string]: boolean } = {};
 
+  availableRoles = Object.values(roles);
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.loadUsers();
     this.currentUser = this.userService.getCurrentUser();
-    if (this.currentUser?.role === 'admin') {
+    this.loadUsers();
+    if (this.currentUser?.role === roles.ADMIN) {
       this.displayedColumns.push('actions');
     }
   }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
 
   loadUsers() {
-    const users = this.userService.getClients();
-    this.dataSource.data = users;
+    if (this.currentUser?.role === roles.ADMIN) {
+      this.dataSource.data = this.userService.getAllUsers();
+    } else {
+      this.dataSource.data = this.userService.getClients();
+    }
   }
-
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

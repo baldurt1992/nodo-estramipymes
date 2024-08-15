@@ -132,6 +132,10 @@ export class UserService {
     return this.users.filter((user) => user.role === 'client');
   }
 
+  getAllUsers() {
+    return this.users;
+  }
+
   updateUser(updatedUser: any) {
     const index = this.users.findIndex(
       (user) => user.email === updatedUser.email

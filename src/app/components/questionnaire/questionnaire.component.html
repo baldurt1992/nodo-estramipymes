@@ -1,14 +1,41 @@
-<div class="w-full h-auto flex justify-center px-4 py-4 lg:px-0 md:py-12">
+<div
+  class="w-full h-auto flex flex-col justify-center items-center px-4 py-4 lg:px-0 md:py-12"
+>
+  <div class="wizard-progress flex items-center justify-center mb-8">
+    <div
+      *ngFor="let section of sections; let i = index"
+      class="step cursor-pointer"
+      [ngClass]="{
+        'text-primaryDark font-semibold': currentSection === section,
+        'text-gray-400': currentSection !== section
+      }"
+      (click)="goToSection(section)"
+    >
+      <div
+        class="step-circle rounded-full h-8 w-8 flex items-center justify-center"
+        [ngClass]="{
+          'bg-primaryDark text-white': currentSection === section,
+          'bg-gray-300 text-gray-500': currentSection !== section
+        }"
+      >
+        {{ i + 1 }}
+      </div>
+      <p class="text-center mt-2">{{ section }}</p>
+    </div>
+  </div>
+
   <div class="py-4 px-4 md:w-2/3 h-full md:h-fit">
     <div class="flex justify-between items-center h-14">
-      <p class="text-primaryDark mb-8 text-2xl lg:text-4xl font-semibold">
+      <p
+        class="text-primaryDark mb-8 text-center text-2xl lg:text-4xl font-semibold"
+      >
         {{ currentSection }}
       </p>
     </div>
     <div>
       <form
         [formGroup]="form"
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-4 mt-8 md:mt-0"
         (ngSubmit)="onSubmit()"
       >
         <div

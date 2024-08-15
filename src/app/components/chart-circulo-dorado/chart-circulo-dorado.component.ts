@@ -126,7 +126,7 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
               font: {
                 size: font_size,
               },
-              color: '#fff'
+              color: '#fff',
             },
             label_how: {
               type: 'label',
@@ -175,17 +175,17 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
   setTextContent(): void {
     // Text Circulo Dorado - Why
     const p_why: string =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum nisi at ipsum mattis, at gravida dui ornare. Aliquam odio ex, ullamcorper eu arcu sed, tincidunt viverra lacus. Etiam posuere elit non accumsan egestas. In sodales cursus dignissim. Curabitur sed consequat mi. Nullam eleifend justo nec lorem ultricies, at feugiat nunc dignissim. Vestibulum quis bibendum massa. Praesent nec euismod turpis, id laoreet urna. Aenean ullamcorper neque et lobortis fringilla.';
+      'El negocio se creó para brindar apoyo estratégico a micronegocios y pymes, especialmente aquellos que no podían acceder a consultorías de alto costo.';
     (document.getElementById('p_why') as HTMLElement).textContent = p_why;
 
     // Text Circulo Dorado - How
     const p_how: string =
-      'Proin pharetra sem ligula, vitae tempus ex pharetra quis. Aliquam erat volutpat. Aliquam sapien sapien, interdum id erat eu, vestibulum feugiat purus. Donec euismod tempor luctus. In hac habitasse platea dictumst. Pellentesque nulla nibh, rhoncus ac dignissim eu, maximus interdum felis. Donec tortor ex, dapibus sit amet metus et, lobortis porta nisl.';
+      'El objetivo principal era desarrollar una metodología que ayudara a estas empresas a mejorar su estrategia competitiva y fortalecer su posición en el mercado.';
     (document.getElementById('p_how') as HTMLElement).textContent = p_how;
 
     // Text Circulo Dorado - What
     const p_what: string =
-      'Sed nec nulla non nunc egestas ultrices. Pellentesque purus erat, mattis vitae semper et, dapibus sit amet nisl. In mollis lorem leo. Pellentesque luctus maximus purus, non viverra tortor molestie sit amet. Etiam eu nulla a diam mollis sagittis. Cras fringilla ut mauris vitae hendrerit. Pellentesque ac turpis velit.';
+      'Ofrece servicios de consultoría estratégica basada en la metodología Estramipyme, además de talleres de cocreación y diagnóstico empresarial.';
     (document.getElementById('p_what') as HTMLElement).textContent = p_what;
   }
 }

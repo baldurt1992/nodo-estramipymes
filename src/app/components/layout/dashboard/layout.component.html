@@ -1,4 +1,4 @@
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col xl:pl-80">
   <div class="flex flex-1">
     <div class="text-white">
       <app-sidebar></app-sidebar>
@@ -11,19 +11,18 @@
         </nav>
       </div>
 
-      <div class="text-black pt-2 px-8 text-xs md:text-lg">
+      <div
+        class="text-black z-50 bg-white pt-2 px-8 text-xs fixed left-2 top-16 xl:left-80 xl:top-6 md:text-lg"
+      >
         <p class="font-semibold text-2xl">Bienvenido</p>
         <p>
           {{ currentUser.role | titlecase }}:
           <span class="text-primaryDark">{{ currentUser.name }}</span>
         </p>
       </div>
-
-      <iframe title="Dashboard Admin" width="1000" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNWMxYTBlYjQtYmRmOC00ZjA5LWE4YjAtYjY5NWNiZTM4MzY4IiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
-
       <app-popup-form *ngIf="showPopup"></app-popup-form>
 
-      <div class="flex-1 p-2 md:p-8 overflow-y-auto">
+      <div class="flex-1 md:p-0 overflow-hidden">
         <router-outlet></router-outlet>
       </div>
     </div>

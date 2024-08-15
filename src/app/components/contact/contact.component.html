@@ -1,5 +1,5 @@
 <div class="py-16 bg-orange" id="contact">
-  <div class="mx-auto px-4">
+  <div class="mx-auto px-4 relative">
     <h2 class="text-5xl title text-center mb-12 text-white">Contacto</h2>
     <div class="max-w-2xl mx-auto bg-white p-8 rounded shadow-lg">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
@@ -112,6 +112,12 @@
           </button>
         </div>
       </form>
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black text-2xl bg-opacity-75 text-white rounded"
+        [ngClass]="{ hidden: !submitted, flex: submitted }"
+      >
+        ¡Formulario enviado correctamente!
+      </div>
     </div>
   </div>
 </div>

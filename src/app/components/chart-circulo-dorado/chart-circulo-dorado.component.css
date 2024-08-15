@@ -4,6 +4,7 @@
     width: 100%;
     margin: 30px;
 
+
     h2 {
         display: flex;
         justify-content: center;
@@ -12,14 +13,16 @@
 
 #circulo_graphs {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    gap: 5rem;
 }
 
 #circulo_textbox {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: normal;
+    align-items: center;
 }
 
 #why,
@@ -28,11 +31,12 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
     justify-content: flex-start;
     align-items: center;
     /* border: 1px solid black; */
     margin: 5px 0;
-    padding: 4%;
+    padding: 2%;
 
     /* color: white; */
     h3 {

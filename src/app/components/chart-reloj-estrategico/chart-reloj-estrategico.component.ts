@@ -9,20 +9,18 @@ Chart.register(...registerables);
   selector: 'app-chart-reloj-estrategico',
   standalone: true,
   templateUrl: './chart-reloj-estrategico.component.html',
-  styleUrls: ['./chart-reloj-estrategico.component.css']
+  styleUrls: ['./chart-reloj-estrategico.component.css'],
 })
 export class ChartRelojEstrategicoComponent implements AfterViewInit {
-
   ngAfterViewInit(): void {
     this.createChart();
   }
 
   private createChart(): void {
-
-    const font_size = 15;
+    const font_size = 12;
     const aspectRatio = 1;
     // Axis limits
-    const xMaxScale = 100;//100 * aspectRatio;
+    const xMaxScale = 100; //100 * aspectRatio;
     const xMinScale = 0;
     const yMaxScale = 100;
     const yMinScale = 0;
@@ -40,9 +38,9 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
     // DATA
     const data = [
       { precio: 30, valor: 50 }, // 2/3 of axis
-      { precio: (20+50+20)/3, valor: (50+50+80)/3 },
+      { precio: (20 + 50 + 20) / 3, valor: (50 + 50 + 80) / 3 },
       { precio: 35.86, valor: 64.14 }, //C^2/2 = a^2
-      { precio: (20+50+50)/3, valor: (50+80+80)/3 },
+      { precio: (20 + 50 + 50) / 3, valor: (50 + 80 + 80) / 3 },
       { precio: 50, valor: 70 },
       { precio: 64.14, valor: 64.14 },
       { precio: 70, valor: 50 },
@@ -64,13 +62,11 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
       // { precio: 44.37, valor: 30.98 },
       // { precio: 55.63, valor: 30.98 },
       // { precio: 65.36, valor: 38.24 }
-
-
     ];
 
-
     const options: ChartConfiguration['options'] = {
-      aspectRatio: aspectRatio,
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         x: {
           min: xMinScale,
@@ -79,13 +75,13 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
             display: true,
             text: 'Precio',
             font: {
-              size: 25
-            }
+              size: 16,
+            },
           },
           border: {
             color: 'rgb(0,0,0)',
             width: 3,
-          }
+          },
         },
         y: {
           min: yMinScale,
@@ -94,14 +90,14 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
             display: true,
             text: 'Valor percibido del producto',
             font: {
-              size: 25
-            }
+              size: 16,
+            },
           },
           border: {
             color: 'rgb(0,0,0)',
             width: 3,
-          }
-        }
+          },
+        },
       },
       elements: {
         point: {
@@ -109,20 +105,9 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
           radius: 10,
           borderColor: 'rgb(255,192,0)',
           borderWidth: 5,
-        }
+        },
       },
       plugins: {
-        title: {
-          display: true,
-          text: 'Reloj Estratégico',
-          font: {
-            size: 30,
-          },
-          align: 'center',
-        },
-        legend: {
-          display: false
-        },
         annotation: {
           annotations: {
             lowPriceLine: {
@@ -136,7 +121,7 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               arrowHeads: {
                 start: { display: true },
                 end: { display: true },
-                display: true
+                display: true,
               },
             },
             lowPriceLabel: {
@@ -146,8 +131,8 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Bajo', 'precio'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
 
             differentiationLine: {
@@ -161,7 +146,7 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               arrowHeads: {
                 start: { display: true },
                 end: { display: true },
-                display: true
+                display: true,
               },
             },
             differentiationlabel: {
@@ -171,8 +156,8 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Diferenciación'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
 
             lowPricelowProfitline: {
@@ -186,7 +171,7 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               arrowHeads: {
                 start: { display: true },
                 end: { display: true },
-                display: true
+                display: true,
               },
             },
             focusedDifferentiationLabel: {
@@ -196,8 +181,8 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Diferenciación', 'segmentada'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
             lowPricelowProfitLabel: {
               type: 'label',
@@ -206,8 +191,8 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Bajo precio /', 'Valor añadido'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
 
             hybridLine: {
@@ -221,7 +206,7 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               arrowHeads: {
                 start: { display: true },
                 end: { display: true },
-                display: true
+                display: true,
               },
             },
             hybridLabel: {
@@ -231,8 +216,8 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Híbrida'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
 
             elipse_center: {
@@ -247,13 +232,13 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
             elipse_bottom: {
               type: 'ellipse',
               yMin: yMinChart, //94000
-              yMax: yCenter - ylength * 0.05,//99000,
-              xMin: xCenter - (xCenter - xMinChart) / 2,//97500,
-              xMax: xMaxScale,//109500,
+              yMax: yCenter - ylength * 0.05, //99000,
+              xMin: xCenter - (xCenter - xMinChart) / 2, //97500,
+              xMax: xMaxScale, //109500,
               borderColor: 'rgb(0, 0, 0)',
               borderWidth: 2,
               rotation: -45,
-              backgroundColor: 'rgba(255, 99, 132, 0)'
+              backgroundColor: 'rgba(255, 99, 132, 0)',
             },
             label_ellipse: {
               type: 'label',
@@ -262,21 +247,23 @@ export class ChartRelojEstrategicoComponent implements AfterViewInit {
               backgroundColor: 'rgba(245,245,245,0)',
               content: ['Estrategias', 'destinadas al', 'fracaso'],
               font: {
-                size: font_size
-              }
+                size: font_size,
+              },
             },
-          }
-        }
-      }
+          },
+        },
+      },
     };
 
     const config: ChartConfiguration = {
       type: 'scatter',
       data: {
-        datasets: [{
-          label: 'Reloj Estratégico',
-          data: data.map(row => ({ x: row.precio, y: row.valor }))
-        }],
+        datasets: [
+          {
+            label: 'Ramiro Wayne Roonie',
+            data: data.map((row) => ({ x: row.precio, y: row.valor })),
+          },
+        ],
       },
       options,
     };

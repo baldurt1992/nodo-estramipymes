@@ -4,6 +4,7 @@ import { RegisterComponent } from './view/register/register.component';
 import { LoginComponent } from './view/login/login.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { WelcomeQuestionnaireComponent } from './components/welcome-questionnaire/welcome-questionnaire.component';
+import { RecoveredPasswordComponent } from './view/recovered-password/recovered-password.component';
 import { roles } from './models/roles';
 import { RoleGuard } from './role.guard';
 
@@ -26,6 +27,10 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'recovered-pw',
+        component: RecoveredPasswordComponent,
       },
     ],
   },

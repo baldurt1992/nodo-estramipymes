@@ -21,12 +21,14 @@ export class QuestionnaireComponent implements OnInit {
   questions: Question[];
   currentQuestionIndex: number = 0;
   maxLength: number = 1500;
+  sections: string[];
 
   constructor(
     private fb: FormBuilder,
     private questionnaireService: QuestionnaireService
   ) {
     this.questions = this.questionnaireService.getQuestions();
+    this.sections = [...new Set(this.questions.map((q) => q.section))];
     this.form = this.fb.group({});
     this.questions.forEach((question) => {
       this.form.addControl(
@@ -82,5 +84,12 @@ export class QuestionnaireComponent implements OnInit {
 
   get currentSection(): string {
     return this.questions[this.currentQuestionIndex].section;
+  }
+
+  goToSection(section: string) {
+    const sectionIndex = this.questions.findIndex((q) => q.section === section);
+    if (sectionIndex !== -1) {
+      this.currentQuestionIndex = sectionIndex;
+    }
   }
 }

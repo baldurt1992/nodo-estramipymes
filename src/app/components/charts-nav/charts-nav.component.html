@@ -1,0 +1,16 @@
+<nav
+  class="fixed top-40 xl:left-80 z-50 grid grid-cols-2 gap-2 text-sm md:flex md:justify-normal md:flex-row md:items-center md:space-x-2 md:px-8"
+>
+  <button
+    *ngFor="let chart of charts"
+    (click)="selectChart(chart.id)"
+    [ngClass]="{
+      'bg-black text-secondary': selectedChartId === chart.id,
+      'bg-white text-black hover:bg-black hover:text-secondary':
+        selectedChartId !== chart.id
+    }"
+    class="py-1 px-2 rounded border-black border shadow-md font-medium transition-all duration-200"
+  >
+    {{ chart.name }}
+  </button>
+</nav>

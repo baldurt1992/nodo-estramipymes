@@ -26,7 +26,7 @@ export class ChartRadarEstrategicoComponent implements AfterViewInit {
       ],
       datasets: [
         {
-          label: 'Radar Estratégico',
+          label: 'Ramiro Wayne Roonie',
           data: [1, 2, 4, 2, 2],
           fill: true,
           backgroundColor: '#01036920',
@@ -60,19 +60,6 @@ export class ChartRadarEstrategicoComponent implements AfterViewInit {
             },
             suggestedMin: 0,
             suggestedMax: 4,
-          },
-        },
-        plugins: {
-          title: {
-            display: true,
-            text: 'Radar Estratégico',
-            font: {
-              size: 30,
-            },
-            align: 'center',
-          },
-          legend: {
-            display: false,
           },
         },
       },

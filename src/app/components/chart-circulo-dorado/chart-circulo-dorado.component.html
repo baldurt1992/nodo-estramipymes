@@ -1,32 +1,32 @@
 <!-- The circulo dorado chart is a mix between annotations in a chart and flexbox containing the user input text -->
 <section class="circulo">
-  <div>
-    <h2 class="text-2xl font-bold">Círculo Dorado</h2>
-  </div>
-  <div id="circulo_graphs" class="flex justify-around items-center">
-    <div class="w-[600px]">
-      <canvas id="circulo_dorado"></canvas>
+  <div
+    id="circulo_graphs"
+    class="flex flex-col justify-around items-center md:flex-row"
+  >
+    <div class="w-auto">
+      <canvas id="circulo_dorado" class="w-full md:w-96"></canvas>
     </div>
-    <div id="circulo_textbox" class="w-[600px] mt-4">
+    <div id="circulo_textbox" class="w-fullmt-4 xl:w[500px]">
       <div
         id="why"
         class="mb-4 text-base bg-blueRegister rounded-md transition-all duration-200 hover:-translate-y-4"
       >
-        <h3 class="font-semibold text-white">Propósito</h3>
+        <h3 class="font-semibold text-center text-white">Propósito</h3>
         <p id="p_why" class="text-white"></p>
       </div>
       <div
         id="how"
         class="mb-4 text-base rounded-md bg-secondary transition-all duration-200 hover:-translate-y-4"
       >
-        <h3 class="text-xl font-semibold">Propuesta de Valor</h3>
+        <h3 class="text-xl text-center font-semibold">Propuesta de Valor</h3>
         <p id="p_how"></p>
       </div>
       <div
         id="what"
         class="mb-4 text-base rounded-md bg-orange transition-all duration-200 hover:-translate-y-4"
       >
-        <h3 class="text-xl font-semibold">Productos y servicios</h3>
+        <h3 class="text-xl text-center font-semibold">Productos y servicios</h3>
         <p id="p_what"></p>
       </div>
     </div>
