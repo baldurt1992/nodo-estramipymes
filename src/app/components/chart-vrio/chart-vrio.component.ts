@@ -38,9 +38,11 @@ export class ChartVrioComponent implements AfterViewInit {
 
     // Active and default settings
 
-    const defaultColor = '#FFFFFF';
-    const activeColor = 'rgba(46, 138, 138, 0)';
+    const defaultColor = 'black';
+    const activeColor = 'yellow';
     const arrowColor = '#000';
+    let shadowBlur = 0;
+    const borderShadowColor = 'red'
 
     let valuableBoxColor,
       valuableHArrowColor,
@@ -94,12 +96,14 @@ export class ChartVrioComponent implements AfterViewInit {
     // disadvantage selection
     function valuableCore() {
       valuableBoxColor = activeColor;
+      shadowBlur = 8;
     }
     function valuableSpecific() {
       disadvantageArrowColor =
         disadvantageBoxColor =
         valuableFalseColor =
           activeColor;
+        shadowBlur = 8; 
     }
 
     // parity selection
@@ -107,10 +111,12 @@ export class ChartVrioComponent implements AfterViewInit {
       valuableCore();
       valuableHArrowColor = activeColor;
       valuableTrueColor = rareBoxColor = activeColor;
+      shadowBlur = 8;
     }
     function rareSpecific() {
       parityArrowColor = activeColor;
       rareFalseColor = parityBoxColor = activeColor;
+      shadowBlur = 8;
     }
 
     // temporary selection
@@ -118,10 +124,12 @@ export class ChartVrioComponent implements AfterViewInit {
       rareCore();
       rareHArrowColor = activeColor;
       rareTrueColor = inimitableBoxColor = activeColor;
+      shadowBlur = 8;
     }
     function inimitableSpecific() {
       temporaryArrowColor = activeColor;
       inimitableFalseColor = temporaryBoxColor = activeColor;
+      shadowBlur = 8;
     }
 
     // unused selection
@@ -129,10 +137,12 @@ export class ChartVrioComponent implements AfterViewInit {
       inimitableCore();
       inimitableHArrowColor = activeColor;
       inimitableTrueColor = organizationBoxColor = activeColor;
+      shadowBlur = 8;
     }
     function organizationSpecific() {
       unusedArrowColor = activeColor;
       organizationFalseColor = unusedBoxColor = activeColor;
+      shadowBlur = 8;
     }
 
     // sustained selection
@@ -140,12 +150,13 @@ export class ChartVrioComponent implements AfterViewInit {
       organizationCore();
       organizationHArrowColor = activeColor;
       organizationTrueColor = sustainedBoxColor = activeColor;
+      shadowBlur = 8;
     }
 
     let userSelection = '';
 
     // Testing
-    userSelection = 'parity';
+    userSelection = '';
 
     if (userSelection === 'disadvantage') {
       valuableCore();
@@ -183,15 +194,15 @@ export class ChartVrioComponent implements AfterViewInit {
 
       plugins: {
         title: {
-          display: true,
-          text: '',
-          font: {
-            size: 30,
-            weight: 'bold',
-            family: 'Arial',
-          },
-          color: '#000',
-          align: 'center' as const,
+          display: false,
+        //   text: '',
+        //   font: {
+        //     size: 30,
+        //     weight: 'bold',
+        //     family: 'Arial',
+        //   },
+        //   color: '#000',
+        //   align: 'center' as const,
         },
 
         legend: {
@@ -208,9 +219,11 @@ export class ChartVrioComponent implements AfterViewInit {
               xMax: diagonal,
               sides: 4,
               radius: 0,
-              backgroundColor: valuableBoxColor,
+              backgroundColor: '#c2b4e2',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: valuableBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             valuableLabel: {
               type: 'label' as const,
@@ -234,7 +247,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: valuableHArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             valuableTrue: {
               type: 'label' as const,
@@ -246,7 +261,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: valuableTrueColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             valuableFalse: {
               type: 'label' as const,
@@ -258,20 +275,10 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#fff',
-            },
-            disadvantageLabel: {
-              type: 'label' as const,
-              xValue: diagonal / 2,
-              yValue: yBottom,
-              backgroundColor: valuableBoxColor,
-              content: ['Desventaja', 'competitiva'],
-              font: {
-                size: font_size,
-                weight: 'bold',
-              },
-              color: '#000',
-            },
+              color: valuableFalseColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
+            },            
             disadvantageArrow: {
               type: 'line' as const,
               yMin: yTop - diagonal / 2,
@@ -282,7 +289,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: disadvantageArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             disadvantageBox: {
               type: 'box' as const,
@@ -290,10 +299,24 @@ export class ChartVrioComponent implements AfterViewInit {
               yMax: yBottom + diagonal / 3,
               xMin: 0,
               xMax: diagonal,
-              backgroundColor: 'rgba(46, 138, 138, 0)',
+              backgroundColor: '#f7b224',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: disadvantageBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
+            disadvantageLabel: {
+                type: 'label' as const,
+                xValue: diagonal / 2,
+                yValue: yBottom,
+                backgroundColor: 'rgba(245,245,245,0)',
+                content: ['Desventaja', 'competitiva'],
+                font: {
+                  size: font_size,
+                  weight: 'bold',
+                },
+                color: '#000',
+              },
 
             // RARE + PARITY
             rareBox: {
@@ -304,9 +327,11 @@ export class ChartVrioComponent implements AfterViewInit {
               xMax: 2 * diagonal + arrow,
               sides: 4,
               radius: 0,
-              backgroundColor: rareBoxColor,
+              backgroundColor: '#085d9c',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: rareBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             rareLabel: {
               type: 'label' as const,
@@ -330,7 +355,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: rareHArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             rareTrue: {
               type: 'label' as const,
@@ -342,7 +369,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: rareTrueColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             rareFalse: {
               type: 'label' as const,
@@ -354,7 +383,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: rareFalseColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             parityBox: {
               type: 'box' as const,
@@ -362,9 +393,11 @@ export class ChartVrioComponent implements AfterViewInit {
               yMax: yBottom + diagonal / 3,
               xMin: diagonal + arrow,
               xMax: 2 * diagonal + arrow,
-              backgroundColor: parityBoxColor,
+              backgroundColor: '#f7b224',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: parityBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             parityLabel: {
               type: 'label' as const,
@@ -377,6 +410,8 @@ export class ChartVrioComponent implements AfterViewInit {
                 weight: 'bold',
               },
               color: '#000',
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             parityArrow: {
               type: 'line' as const,
@@ -388,7 +423,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: parityArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
 
             // INIMITABLE + TEMPORARY
@@ -400,9 +437,11 @@ export class ChartVrioComponent implements AfterViewInit {
               xMax: 3 * diagonal + 2 * arrow,
               sides: 4,
               radius: 0,
-              backgroundColor: inimitableBoxColor,
+              backgroundColor: '#f78263',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: inimitableBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             inimitableLabel: {
               type: 'label' as const,
@@ -426,7 +465,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: inimitableHArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             inimitableTrue: {
               type: 'label' as const,
@@ -438,7 +479,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: inimitableTrueColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             inimitableFalse: {
               type: 'label' as const,
@@ -450,7 +493,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: inimitableFalseColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             temporaryBox: {
               type: 'box' as const,
@@ -458,9 +503,11 @@ export class ChartVrioComponent implements AfterViewInit {
               yMax: yBottom + diagonal / 3,
               xMin: 2 * (diagonal + arrow),
               xMax: 3 * diagonal + 2 * arrow,
-              backgroundColor: temporaryBoxColor,
+              backgroundColor: '#f7b224',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: temporaryBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             temporaryLabel: {
               type: 'label' as const,
@@ -484,7 +531,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: temporaryArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
 
             // ORGANIZATION
@@ -496,9 +545,11 @@ export class ChartVrioComponent implements AfterViewInit {
               xMax: 4 * diagonal + 3 * arrow,
               sides: 4,
               radius: 0,
-              backgroundColor: organizationBoxColor,
+              backgroundColor: '#e3cc64',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: organizationBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             organizationLabel: {
               type: 'label' as const,
@@ -522,7 +573,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: organizationHArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             organizationTrue: {
               type: 'label' as const,
@@ -534,7 +587,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: organizationTrueColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             organizationFalse: {
               type: 'label' as const,
@@ -546,7 +601,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 size: font_size,
                 weight: 'bold',
               },
-              color: '#000',
+              color: organizationFalseColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             unusedBox: {
               type: 'box' as const,
@@ -554,9 +611,11 @@ export class ChartVrioComponent implements AfterViewInit {
               yMax: yBottom + diagonal / 3,
               xMin: 3 * (diagonal + arrow),
               xMax: 4 * diagonal + 3 * arrow,
-              backgroundColor: unusedBoxColor,
+              backgroundColor: '#f7b224',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: unusedBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             unusedLabel: {
               type: 'label' as const,
@@ -580,7 +639,9 @@ export class ChartVrioComponent implements AfterViewInit {
                 end: { display: true },
               },
               borderWidth: 2,
-              borderColor: arrowColor,
+              borderColor: unusedArrowColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
 
             // SUSTAINED
@@ -590,9 +651,11 @@ export class ChartVrioComponent implements AfterViewInit {
               yMax: yTop - diagonal / 2,
               xMin: 4 * diagonal + 4 * arrow,
               xMax: 5 * diagonal + 5 * arrow,
-              backgroundColor: sustainedBoxColor,
+              backgroundColor: '#f7b224',
               borderWidth: 2,
-              borderColor: '#000',
+              borderColor: sustainedBoxColor,
+              borderShadowColor: borderShadowColor,
+              shadowBlur: shadowBlur,
             },
             sustainedLabel: {
               type: 'label' as const,
