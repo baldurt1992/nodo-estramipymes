@@ -1,6 +1,11 @@
 <div class="py-16 bg-orange" id="contact">
   <div class="mx-auto px-4 relative">
-    <h2 class="text-5xl title text-center mb-12 text-white">Contacto</h2>
+    <h2 class="text-5xl title text-center mb-12 text-white">
+      Únete a la lista de espera
+    </h2>
+    <p class="text-center font-semibold text-primaryDark underline text-xl">
+      Y recibe una asesoría gratis
+    </p>
     <div class="max-w-2xl mx-auto bg-white p-8 rounded shadow-lg">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="mb-4 relative">
@@ -24,14 +29,14 @@
         </div>
         <div class="mb-4 relative">
           <label class="block text-gray800 text-sm font-bold mb-2" for="email">
-            Email
+            Correo
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             formControlName="email"
-            placeholder="Tu email"
+            placeholder="Tu correo"
             autocomplete="email"
           />
           <div
@@ -46,6 +51,34 @@
               >Campo requerido</small
             >
             <small *ngIf="f['email'].errors?.['email']" class="text-red text-xs"
+              >Email no válido</small
+            >
+          </div>
+        </div>
+        <div class="mb-4 relative">
+          <label class="block text-gray800 text-sm font-bold mb-2" for="email">
+            Célular
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray800 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone"
+            type="tel"
+            formControlName="phone"
+            placeholder="Tu célular"
+            autocomplete="phone"
+          />
+          <div
+            *ngIf="
+              f['phone'].invalid && (f['phone'].dirty || f['phone'].touched)
+            "
+            class="absolute bottom-0 right-4"
+          >
+            <small
+              *ngIf="f['phone'].errors?.['required']"
+              class="text-red text-xs"
+              >Campo requerido</small
+            >
+            <small *ngIf="f['phone'].errors?.['phone']" class="text-red text-xs"
               >Email no válido</small
             >
           </div>
