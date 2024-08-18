@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { Chart, ChartConfiguration } from 'chart.js';
 import annotationPlugin from 'chartjs-plugin-annotation';
 
@@ -11,9 +11,30 @@ Chart.register(annotationPlugin);
   styleUrls: ['./chart-circulo-dorado.component.css'],
 })
 export class ChartCirculoDoradoComponent implements AfterViewInit {
+  chart: Chart | undefined;
+  lineWhy: any;
+  lineHow: any;
+  lineWhat: any;
+
   ngAfterViewInit(): void {
     this.createChart();
     this.setTextContent();
+    this.toggleLines(window.innerWidth);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.toggleLines((event.target as Window).innerWidth);
+  }
+
+  toggleLines(width: number): void {
+    if (this.chart) {
+      const isSmallScreen = width < 768;
+      this.lineWhy.display = !isSmallScreen;
+      this.lineHow.display = !isSmallScreen;
+      this.lineWhat.display = !isSmallScreen;
+      this.chart.update();
+    }
   }
 
   createChart(): void {
@@ -24,6 +45,45 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
     const k = 0.15;
     const percent_circle = diameter * k;
     const font_size = 15;
+
+    this.lineWhy = {
+      type: 'line',
+      yMin: 60,
+      yMax: 85,
+      xMin: 50,
+      xMax: 100,
+      borderColor: 'rgb(0, 0, 0)',
+      borderWidth: 1,
+      arrowHeads: {
+        end: { display: true },
+      },
+    };
+
+    this.lineHow = {
+      type: 'line',
+      yMin: 50,
+      yMax: 50,
+      xMin: 75,
+      xMax: 100,
+      borderColor: 'rgb(0, 0, 0)',
+      borderWidth: 1,
+      arrowHeads: {
+        end: { display: true },
+      },
+    };
+
+    this.lineWhat = {
+      type: 'line',
+      yMin: 15,
+      yMax: 10,
+      xMin: 70,
+      xMax: 100,
+      borderColor: 'rgb(0, 0, 0)',
+      borderWidth: 1,
+      arrowHeads: {
+        end: { display: true },
+      },
+    };
 
     const options: ChartConfiguration['options'] = {
       aspectRatio: 1,
@@ -81,42 +141,10 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
               backgroundColor: '#085FA0',
               borderWidth: 2,
             },
-            line_why: {
-              type: 'line',
-              yMin: 60,
-              yMax: 85,
-              xMin: 50,
-              xMax: 100,
-              borderColor: 'rgb(0, 0, 0)',
-              borderWidth: 1,
-              arrowHeads: {
-                end: { display: true },
-              },
-            },
-            line_how: {
-              type: 'line',
-              yMin: 50,
-              yMax: 50,
-              xMin: 75,
-              xMax: 100,
-              borderColor: 'rgb(0, 0, 0)',
-              borderWidth: 1,
-              arrowHeads: {
-                end: { display: true },
-              },
-            },
-            line_what: {
-              type: 'line',
-              yMin: 15,
-              yMax: 10,
-              xMin: 70,
-              xMax: 100,
-              borderColor: 'rgb(0, 0, 0)',
-              borderWidth: 1,
-              arrowHeads: {
-                end: { display: true },
-              },
-            },
+            // Usar las propiedades del componente para las anotaciones de líneas
+            line_why: this.lineWhy,
+            line_how: this.lineHow,
+            line_what: this.lineWhat,
             label_why: {
               type: 'label',
               xValue: circle_size[2] + diameter / 2,
@@ -166,7 +194,7 @@ export class ChartCirculoDoradoComponent implements AfterViewInit {
       options,
     };
 
-    new Chart(
+    this.chart = new Chart(
       document.getElementById('circulo_dorado') as HTMLCanvasElement,
       config
     );
